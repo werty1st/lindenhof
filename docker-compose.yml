@@ -8,11 +8,11 @@ services:
         - '4000:4000'
         - '35729:35729'
     volumes:
-      - ./source/:/site
+      - ./:/site
       - ./gems:/usr/local/bundle/
 
 # setup
 # docker-compose -f docker-compose.yml -f docker-compose-setup.yml up
 
-# docker run -it --rm -v $(pwd)/source:/site bretfisher/jekyll new . --force
-# docker run -it --rm --entrypoint bash -v $(pwd)/source:/site -v $(pwd)/gems:/usr/local/bundle/ bretfisher/jekyll bundle package
+# docker run -it --rm -v $(pwd):/site bretfisher/jekyll new . --force
+# docker run -it --rm --entrypoint bash -v $(pwd):/site -v $(pwd)/gems:/usr/local/bundle/ bretfisher/jekyll bundle package
