@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  jekyll:
+    image: bretfisher/jekyll
+    command: new . --force
+
